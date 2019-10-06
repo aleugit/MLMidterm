@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- title of the page -->
+	<title>image_classification</title>
+	<!-- load processing library-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+	<!-- load ml5.js -->
+	<script src="https://unpkg.com/ml5@0.1.1/dist/ml5.min.js"></script>
+	<!-- load index.js -->
+	<script src="../static/js/index.js"></script>
+</head>
+
+<title>Flaskex Charged</title>
+<section class="hero is-primary is-bold is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="settings" class="settings-box">
+        <div class="settings-area">    
+          <h1 class="title">Thank you for your purchase</h1>
+          
+          
+          	<div>
+    <h2>$5.00 PAID!!!</h2>
+    <p>Please allow access to your WebCam so we can run <br>an Image Classification Model with TensorFlow.js</p>
+  </div>
+          
+
+
+
+          <i><a id="feedback" class="feedback"></a></i>
+        </div>
+      </div>    
+    </div>
+  </div>
+</section>
+
+<body>
+	<!-- this is where the video will be shown -->
+	<br>
+	<video id="video"></video>
+</body>
+{% endblock %}
+{% block scripts %}
+
+<script src="../static/js/scripts.js"></script>
+{% endblock %}
+

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<title>Flaskex</title>
+<section class="hero is-primary is-bold is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="settings" class="settings-box">
+        <div class="settings-area">    
+          <h1 class="title">ML Midterm</h1>
+          
+          
+          	<div>
+    <h2>Buy for $5.00</h2>
+    <p>Please enter your email; <br>credit card number number <br>(Test card 4242 4242 4242 4242) Any future date 02/22 <br> any positive 3 digit number 325</p>
+    <form action="/charge" method="post">
+      <script
+        src="https://checkout.stripe.com/checkout.js"
+        class="stripe-button"
+        data-key="{{ key }}"
+        data-description="A Flask Charge"
+        data-amount="500"
+        data-locale="auto"> 
+      </script>
+    </form>
+  </div>
+          
+
+
+
+          <i><a id="feedback" class="feedback"></a></i>
+        </div>
+      </div>    
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+
+<script src="../static/js/scripts.js"></script>
+{% endblock %}
